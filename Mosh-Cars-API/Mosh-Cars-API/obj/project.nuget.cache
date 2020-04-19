@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "7yfs9mxqv5cUGhOJMZF4lQfasg0avVpOjHscGKmGjiTSQsIJN34cV6jTZYlCht2yPK6GRwsIS0Bx5rOuZMzw4w==",
+  "success": true,
+  "projectFilePath": "C:\\Repos\\Github\\Mosh-ASP.NETCore-Angular\\Mosh-Cars-API\\Mosh-Cars-API\\Mosh-Cars-API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\29754\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\29754\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
+    "C:\\Users\\29754\\.nuget\\packages\\swashbuckle.aspnetcore\\5.3.2\\swashbuckle.aspnetcore.5.3.2.nupkg.sha512",
+    "C:\\Users\\29754\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.3.2\\swashbuckle.aspnetcore.swagger.5.3.2.nupkg.sha512",
+    "C:\\Users\\29754\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.3.2\\swashbuckle.aspnetcore.swaggergen.5.3.2.nupkg.sha512",
+    "C:\\Users\\29754\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.3.2\\swashbuckle.aspnetcore.swaggerui.5.3.2.nupkg.sha512"
+  ],
+  "logs": []
+}
