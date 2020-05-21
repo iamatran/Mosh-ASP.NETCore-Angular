@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Mosh_Guided_Tutorial.Persistence;
 
 namespace Mosh_Guided_Tutorial
 {
@@ -20,6 +22,11 @@ namespace Mosh_Guided_Tutorial
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // HERE We're configuring our new DbContext we created to run at startup
+            // We're passing in our SQL Server connection string to be used here from the config file
+            // services.AddDbContext<VegaDbContext>(options => options.UseSqlServer("server=localhost; database=MoshGuidedTutorial; Trusted_Connection=True");
+            services.AddDbContext<VegaDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:Default"]));
+
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
