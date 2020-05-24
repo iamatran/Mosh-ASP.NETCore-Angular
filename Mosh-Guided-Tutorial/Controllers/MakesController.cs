@@ -30,6 +30,13 @@ namespace Mosh_Guided_Tutorial.Controllers
         // Bc we're using Async we must add Task<>
         // Async methods need an Await method that yields the result, and Task<> is an Await method
         // the old synchronous way: public IEnumerable<Make> GetMakes()
+
+        // Currently this has an exception due to a circular reference
+        // This is bc we're using the model, which references itself - we need to separate it out with a Dto
+        // This would separate our model from our controller so that the ui can't access/update things it should not access like system generated columns like Id's
+        // Please see ../Resources/MakeDto.cs to see the abstraction
+
+        // Since we're now using the Dto, we need to map these dto to our Model objects using automapper
         public async Task<IEnumerable<Make>> GetMakes()
         {
             // To access the Db, you need your context

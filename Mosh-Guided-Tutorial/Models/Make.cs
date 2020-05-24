@@ -15,6 +15,7 @@ namespace Mosh_Guided_Tutorial.Models
         //This relationship of Model to Make will allow migrations to discover this without having to add it to the db context
         public ICollection<Model> Models { get; set; }
 
+        // This is the constructor which will initialize this object whenever something calls on the Make Class
         public Make()
         {
             Models = new Collection<Model>();
