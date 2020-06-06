@@ -58,5 +58,12 @@ namespace Mosh_Guided_Tutorial.Controllers
             return mapper.Map<List<Make>, List<MakeDto>>(makes);
         }
 
+        [HttpGet("/api/make/{makeId}")]
+        public async Task<ActionResult<MakeDto>> GetMake([FromRoute] int makeId)
+        {
+            var make = await context.Makes.Include(m=>m.Models).FirstOrDefaultAsync(m=>m.Id == makeId);
+            return mapper.Map<Make, MakeDto>(make);
+        }
+
     }
 }
