@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Mosh_Guided_Tutorial.Persistence;
+using AutoMapper;
 
 namespace Mosh_Guided_Tutorial
 {
@@ -22,6 +23,10 @@ namespace Mosh_Guided_Tutorial
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // We need to configure Automapper for dependency Injection
+            // Make sure you have Automapper dependency injection setup in .csproj file
+            services.AddAutoMapper(typeof(Startup));
+
             // HERE We're configuring our new DbContext we created to run at startup
             // We're passing in our SQL Server connection string to be used here from the config file
             // services.AddDbContext<VegaDbContext>(options => options.UseSqlServer("server=localhost; database=MoshGuidedTutorial; Trusted_Connection=True");
